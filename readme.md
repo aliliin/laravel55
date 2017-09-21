@@ -1,15 +1,15 @@
 ## 					Laravel 5.5的目录结构简介
 
-  文件夹名称               	简介                                      
-  app                 	应用程序的业务逻辑代码存放文件夹                        
-  app/Console         	存放自定义 Artisian 命令文件                     
-  app/Http/Controllers	存放控制器文件                                 
-  app/Http/Middleware 	存放「中间件」文件                               
-  bootstrap           	框架启动与自动加载设置相关的文件                        
-  composer.json       	应用依赖的扩展包                                
-  composer.lock       	扩展包列表，确保这个应用的副本使用相同版本的扩展包               
-  config              	应用程序的配置文件                               
-  database            	数据库操作相关文件（数据库迁移和数据填充）                   
+  文件夹名称               	                        简介                                      
+  app                 	                        应用程序的业务逻辑代码存放文件夹                        
+  app/Console         	                        存放自定义 Artisian 命令文件                     
+  app/Http/Controllers	                        存放控制器文件                                 
+  app/Http/Middleware 	                        存放「中间件」文件                               
+  bootstrap           	                        框架启动与自动加载设置相关的文件                        
+  composer.json       	                        应用依赖的扩展包                                
+  composer.lock       	                        扩展包列表，确保这个应用的副本使用相同版本的扩展包               
+  config              	                        应用程序的配置文件                               
+  database            	                        数据库操作相关文件（数据库迁移和数据填充）                   
   node_modules        	存放 NPM 依赖模块                             
   package.json        	应用所需的 NPM 包配置文件                         
   phpunit.xml         	测试工具 PHPUnit 的配置文件                      
@@ -34,3 +34,19 @@
   yarn.lock           	Yarn 依赖版本锁定文件                           
   .gitignore          	被 Git 所忽略的文件                            
   .env                	环境变量配置文件                 
+  
+  
+  
+  ### php artisan 常用命令
+  命令	                    说明
+php artisan key:generate	生成 App Key
+php artisan make:controller	生成控制器
+php artisan make:model	生成模型
+php artisan make:policy	生成授权策略
+php artisan make:seeder	生成 Seeder 文件
+php artisan migrate	执行迁移
+php artisan migrate:rollback	回滚迁移
+php artisan migrate:refresh	重置数据库
+php artisan db:seed	填充数据库
+php artisan tinker	进入 tinker 环境
+php artisan route:list	查看路由列表
