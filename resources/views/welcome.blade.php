@@ -69,7 +69,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    hello Laravel !
+                    hello Laravel5 !
                 </div>
             </div>
         </div>
