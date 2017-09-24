@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/','StaticPagesController@home');
+Route::get('/','StaticPagesController@home')->name('home');
 Route::get('/help','StaticPagesController@help')->name('help');
 Route::get('/about','StaticPagesController@about')->name('about');
 
@@ -29,3 +29,9 @@ Route::get('signup/confirm/{token}', 'UsersController@confirmEmail')->name('conf
 
 //发微博
 Route::resource('statuses', 'StatusesController', ['only' => ['store', 'destroy']]);
+//关注展示
+Route::get('/users/{user}/followings', 'UsersController@followings')->name('users.followings');
+Route::get('/users/{user}/followers', 'UsersController@followers')->name('users.followers');
+//关注行为
+Route::post('/users/followers/{user}', 'FollowersController@store')->name('followers.store');
+Route::delete('/users/followers/{user}', 'FollowersController@destroy')->name('followers.destroy');
