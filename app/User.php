@@ -10,6 +10,10 @@ class User extends Authenticatable
     use Notifiable;
     protected $table = 'users';
 
+    public function statuses()
+    {
+        return $this->hasMany(Status::class);
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -42,6 +46,10 @@ class User extends Authenticatable
         static::creating(function ($user){
             $user->activation_token = str_random(30);
         });
-
+    }
+    //所有微博内容展示
+    public function feed()
+    {
+        return  $this->statuses()->orderBy('created_at','desc');
     }
 }
